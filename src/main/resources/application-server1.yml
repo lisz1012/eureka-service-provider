@@ -1,3 +1,4 @@
+# -Dspring.profiles.active=server1
 server:
   port: 7901
 

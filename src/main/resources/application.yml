@@ -1,15 +1,15 @@
 # 单节点Eureka
 server:
-  port: 7901
+  port: 7900
 
 eureka:
   instance:
-    hostname: eureka-7901
+    hostname: registrar
   client:
     register-with-eureka: false
     fetch-registry: false
     service-url:
-      defaultZone: http://eureka-7901:7901/eureka/
+      defaultZone: http://registrar:7900/eureka/
 
 spring:
   application:

@@ -1,0 +1,15 @@
+server:
+  port: 7903
+
+eureka:
+  instance:
+    hostname: eureka-7903
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://eureka-7901:7901/eureka/
+
+spring:
+  application:
+    name: Eureka

@@ -6,7 +6,19 @@ server:
 eureka:
   client:
     service-url:
+#      defaultZone: http://registrar:7900/eureka/   #  docker环境用这个配置
       defaultZone: http://localhost:7900/eureka/
+    healthcheck:
+      enabled: true
   instance:
+    hostname: provider
     metadata-map:
       dalao: lisz-hahaha
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    shutdown:
+      enabled: true
